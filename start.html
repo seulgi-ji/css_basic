@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- html 주석 -->
+    <style>
+        /* css 주석 */
+        /* 선택자 {속성:값; 속성:값;}*/
+        body {background-color:rgb(215, 197, 251);}
+        /* 태그 작성 순서와 동일하게 선택자 작성*/
+        /* #wrap {} 아이디 wrap을 가진 대상에 디자인 적용*/
+        #wrap {background-color: #eee;}
+        /* 아이디 wrap 부모 안 h1 선택 */
+        #wrap h1 {background-color: #f5f5f5;}
+        #wrap h1 a {background-color: #ff0;}
+        #wrap h1+p{color: rgb(255, 0, 132);}
+        #wrap p {background-color: #ffc;}
+        #wrap .list {background-color: #0cf;}
+        #wrap .list li {background-color: #1fe;}
+        #wrap .list li em {background-color: #fff ;}
+        #wrap .list li span {background-color: #fff;}
+        #wrap dl {background-color: #0cf;}
+        #wrap dl dt {background-color: #ff0;}
+        #wrap dl dd {background-color: aqua;}
+
+        /* 선택자연습*/
+        #wrap {}
+        #wrap h1 {}
+        #wrap h1 a {}
+        #wrap p {}
+        #wrap .list {}
+        #wrap .list li {}
+        #wrap .list li em {}
+        #wrap .list li span {}
+        #wrap dl {}
+        #wrap dl dt {}
+        #wrap dl dd {}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1><a href=#>logo</a></h1>
+        <p>contents</p>
+        <p>contents</p>
+        <ul class="list">
+            <li>내용1</li>
+            <li><em>내용2</em></li>
+            <li><span>내용3</span></li>
+            <li><img src="#" alt="#">내용4</li>
+        </ul>
+        <dl>
+            <dt>title1</dt>
+            <dd>contents1</dd>
+            <dt>title2</dt>
+            <dd>contents2</dd>
+        </dl>
+    </div>
+</body>
+</html>

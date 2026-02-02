@@ -1,0 +1,29 @@
+/* 디자인 css */
+body {}
+#news {
+    width: 430px ; height: 932px ;
+    padding: 15px 30px ;
+    background-color: #CEFFFB;
+}
+#news > * {padding-bottom: 25px;}/* >a, dox, >p */
+#news > a {
+    display:block;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+#news .box {}
+#news .box a {}
+#news .box a * {
+    padding-bottom: 25px;
+    display : inline;
+}
+#news .box a h2 { /* display:inline; */
+    font-size: 1.88rem ;
+    font-weight: 300;
+}
+#news .box a p { /* display:inline;*/
+    font-size:0.88rem ;
+    font-weight: 400;
+}
+#news > p {}
+#news > p span {}
