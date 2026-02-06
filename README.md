@@ -78,3 +78,34 @@
     * 그 외 나머지 칸은 지우거나 주석걸기
 * 수직 열 합치기
     * `<td rowspan="합치는 열 개수">내용</td>`
+## form 요소들의 동적인 편의 HTML + CSS
+* `<input autofocus placeholder="">`
+    * autofocus : 페이지 접속시 바로 커서 위치 활성화
+    * placeholder : 안내메세지 표시
+        * `input::placeholder {}` 안내메세지 디자인
+    * `input:focus {}` 입력칸 활성화 표시 디자인
+### button
+`<button type="button" 이벤트="자바스크팁트명령어작성">`
+* 버튼에 이벤트 작성 시 반드시 type은 button(범용기능)
+* `onclick=""` 클릭시 "명령어" 실행 이벤트
+`window.location.href='실행주소'`
+    * (위) `a href="실행주소"와 동일한 js 명령어`
+* `button:hover {}` : 버튼에 마우스 올렸을 시 디자인 변경
+# 웹글꼴 `<link>` , `@font-face`
+## `<link>` 사용법과 특징
+* `head` 태그 안 `reset.css` 연결보다 위에 작성
+* `@font-face`에 비해 사용이 간편함
+* 작성한 html에서만 사용할 수 있다는 단점 있음
+## `@font-face` 사용법과 특징
+* `reset.css` 파일 내 가장 위쪽 라인에 작성
+* @font-face {`
+* `font-family '사용할 글꼴 이름 임의 작성';:`
+* `scr-url(글꼴주소); :`
+* `font-weight: 글꼴 굵기(200~700 글꼴에 따라 다름);`
+* `font-style: 기울기 (normal, italic 등);`
+* `font-disply : swap ;`
+`}
+* reset에 한번 연결해두면 모든 html에서 사용 가능
+`@font-facd {font-family : '사용할 글꼴명'}` (예)컴퓨터 글꼴 설치
+`선택자 {font-family: '웹글꼴로 불러온 글꼴명'}` (예)포토샵 글꼴 사용
+
