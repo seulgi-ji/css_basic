@@ -120,4 +120,37 @@
     * 2개 이상 작성시 역순으로 정렬됨
 * `float:none` : float 제거
 * `clear:both` : 이전 형제에 작성된 float 정렬 해제
-
+### position
+* `position:ralative`
+    * 태그의 기존 위치에서 상/하/좌/우로 약간의 이동이 필요할때
+    * 자식 또는 자손 요소에 absolute가 있어서 부모 기준이 필요할때
+* `position:absolute`
+    * 부모, 형제 요소와 겹치는 디자인 특징이 필요할때
+    * block요소에 absolute 설정시 inline-block처럼 너비를 내용만큼 인식함 -> 너비 재입력
+    * 부모 후보(dl,dt)들에게 추가 position 설정 안할 시 body 기준으로 움직임
+    * (예) dl dt p (position:absolute;)
+* `z-index`
+* absolute로 인해 겹쳐진 형제 요소들 사이 중첩 순서가 필요할 때
+* 0~999 작성가능(단위 작성없이 숫자만 작성)
+* position 속성이 없으면 `z-index` 적용불가
+## 가상 CSS 선택자 ::after, ::before
+* 시각적인 목적으로 디자인 배경, 선 등의 요소가 필요할 때 HTML 태그없이 CSS 만으로 디자인을 만드는 선택자
+* `부모선택자::after {} ` -> 부모의 마지막 자식에 디자인 생성
+* `부모선택자::before {} ` -> 부모의 첫번째 자식에 디자인 생성
+### after, before 사용시 필수속성
+* `content:'';` -> 내용 인식 속성, 글자 필요한 디자인이 아닐 경우 '' 빈따옴표
+* `display, background-color, widht, height`
+## 계산기 함수 `calc()`
+* +,-,*,/,% 다양한 사칙연산 사용 가능
+* 추가 괄호를 통한 복작한 계산 가능
+* **연산자 앞 뒤 여백 필수** `1+1(x)` `1 + 1(O)`
+* `widht`, `heifht`, `margin` `padding` 등 숫자 입력 속성 활용 가능
+### calc () 활용 예시
+* `li [width : calc(100%) / 4;]`
+* 4개의 li를 같은 크기로 나누기
+* `li [width : calc(100%) - 30px - 4);]`
+* 4개의 ㅣㅑdp rkr 10px씩 사이여백을 주기 위해 전체 부모 100% 너비중
+10*3 총 30px을 빼고 나머지 값을 4로 나누기
+* `li [width : calc((100% - (10px * 3)) - 4);]`
+* `a [display:block: height:cald(100% - 50px);]`
+* a의 크기를 인식하게 만들고 50px을 뺀 나머지 부모크기주기
