@@ -188,3 +188,8 @@
     `flex-start, flex-end, center` 위 메인축과 뜻 동일
 * `allgn-content:` 교차축이 2줄이상일때
     `flex-start, flex-end, center, space-between,space-around` 위 메인축과 뜻 동일, 값 동일
+## 스크롤 디자인
+* firefox
+html {scrollbar-width : 10px scrollbar-color #222 #222}
+* opera
+html:: 

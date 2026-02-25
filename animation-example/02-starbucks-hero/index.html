@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타벅스 코리아</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        header, #v_c {width:1400px; margin:0 auto;}
+        header img {width:100%;}
+        #visual {
+            background:#1e3932; padding:200px 0;
+            position:relative; overflow:hidden;
+        }
+        #v_img {
+            position:absolute; right:100px; bottom:-100px;
+        }
+        #v_btn {
+            position:absolute; left:0; bottom:20px; width:100%;
+            display:flex; flex-flow: row nowrap; justify-content: center;
+        }
+        #v_btn a {
+            width:50px; margin:0 10px; 
+            display:flex; align-items:flex-end;
+        }
+        #v_btn a img {
+            width:100%;
+            transition: transform 1s;
+        }
+        /* 개별 transform 연습용 선택자 */
+        #v_btn a:first-child {
+            background: #1e3932;
+            transform: scale(1);
+            transition: transform 0.5s;
+        }
+        #v_btn a:first-child:hover {
+            transform: scale(1.1);
+        } /* 첫번째 a 마우스 올렸을때 */
+        #v_btn a:nth-child(2) {
+            /* transform 기준점 바꾸기(기본-중앙) */
+            transform: scale(1) rotate(0);
+            transform-origin: center bottom;
+            transition: transform 0.3s;
+        }
+        #v_btn a:nth-child(2):hover {
+            transform: scale(1.1);
+            transform: (20deg);
+        }
+        #v_btn a:last-child {
+            transform: skew(10deg);
+            transition: transform 0.5s;
+        }
+        #v_btn a:last-child:hover {
+            transform: skew(0);
+        }
+        #v_btn a:last-child:hover img {
+            transform: translateX(20px);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+
+            
+
+        }//e:onload
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header><img src="coffee_images/starbucks_header.jpg" alt=""></header>
+    </div>
+    <div id="visual">
+        <div id="v_c">
+            <img src="coffee_images/starbucks_title.jpg" alt="">
+        </div>
+        <div id="v_img">
+            <img src="coffee_images/starbucks1.png" alt="" id="starbucks_img">
+        </div>
+        <div id="v_btn">
+            <a href="#"><img src="coffee_images/starbucks1.png" alt=""></a>
+            <a href="#"><img src="coffee_images/starbucks2.png" alt=""></a>
+            <a href="#"><img src="coffee_images/starbucks3.png" alt=""></a>
+        </div>
+    </div>
+</body>
+</html>
